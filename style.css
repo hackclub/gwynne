@@ -1,14 +1,14 @@
 body{
-    background: #9191F5;
-    font-family: monospace, monospace;
-    overflow-x: hidden;
-    position: relative;
+  background: #9191F5;
+  font-family: monospace, monospace;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .statheading{
   display: block;
-margin-left: auto;
-margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
   width: fit-content;
   height: fit-content;
   padding-left: 20px;
@@ -42,11 +42,9 @@ margin-right: auto;
   -webkit-text-fill-color: black;
 
   display: block;
-margin-left: auto;
-margin-right: auto;
-
-background-color: #FFA8D8;
-;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFA8D8;
 
 }
 
@@ -112,44 +110,66 @@ line-height: 96.82px;
   }
 }
 
-.gallery-container {
-  white-space: nowrap;
-  padding: 20px;
-  margin-top: 20px;
-  overflow-x: scroll;
-  cursor: all-scroll;
-}
-
-.gallery-item:first-child {
-  margin-left: -150px;
-}
 .gallery-item {
-  display: inline-block;
-  margin-right: 10px;
   width: 450px;
   height: 320px;
   background-size: cover;
-    background-position: center;
+  background-position: center;
 }
 
-
 @media screen and (max-width: 1000px) {
-  .gallery-container {
-    white-space: nowrap;
-    padding: 20px;
-    margin-top: 20px;
-  }
-
-  .gallery-item:first-child {
-    margin-left: -30px;
-  }
-
   .gallery-item {
-    display: inline-block;
-    margin-right: 10px;
     width: 250px;
     height: 200px;
-    background-size: cover;
-      background-position: center;
+  }
+}
+
+.tag-list {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+}
+
+.scroller {
+  max-width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+ 
+}
+
+.scroller[data-animated = "true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+}
+
+.scroller[data-animated = "true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.625rem));
   }
 }
