@@ -179,6 +179,10 @@ line-height: 96.82px;
     grid-template-columns: 100%;
   }
 
+  .parallax-text {
+    margin-left: 5vw;
+  }
+
   .parallax-text h2 {
     font-size: 0.7em;
   }
