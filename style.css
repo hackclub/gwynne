@@ -69,6 +69,7 @@ line-height: 96.82px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
   color: white;
   font-family: monospace, monospace;
   text-align: center;
@@ -78,6 +79,7 @@ line-height: 96.82px;
 
 .scrolling{ 
   min-height: 900px;
+  width: 100%;
   background-image: url("img/background-overlay.png");
   background-size: cover;
   background-repeat: no-repeat;
