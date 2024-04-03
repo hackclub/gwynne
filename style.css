@@ -63,7 +63,7 @@ line-height: 96.82px;
 }
 
 .parallax {
-  background-image: url("stars-background.png");
+  background-image: url("img/stars-background.png");
   min-height: 750px; 
   background-attachment: fixed;
   background-position: center;
@@ -78,10 +78,9 @@ line-height: 96.82px;
 
 .scrolling{ 
   min-height: 900px;
-  background-image: url("background-overlay.png");
+  background-image: url("img/background-overlay.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: black;
 }
 
 @media screen and (max-width: 550px) {
