@@ -57,7 +57,18 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(counter);
     });
 
+    // PARALLAX
+    const parallax_image = document.querySelector(".parallax");
+    let imageHeight = parallax_image.offsetHeight;
+    const parallax_text = document.querySelector(".parallax-text");
 
+    document.addEventListener('scroll', function() {
+        let value = window.scrollY;
+        if (value < imageHeight/1.8) {
+            parallax_text.style.transform = `translateY(${value*1.5}px)`;
+            parallax_text.style.opacity = 1 - (value*2) / imageHeight;
+        }
+    })
 });
 
 function addAnimation(scrollers) {
