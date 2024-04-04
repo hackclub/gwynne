@@ -4,6 +4,7 @@ body{
   overflow-x: hidden;
   position: relative;
   margin: 0;
+  z-index: 2;
 }
 
 .statheading{
@@ -77,11 +78,15 @@ line-height: 96.82px;
   text-align: center;
   padding-top: 75px;
   font-size: 50px;
+  z-index: 2;
+  position: relative;
 }
 
 .parallax-text {
   text-align: left;
   margin-left: 10vw;
+  z-index: 1;
+  position: absolute;
 }
 
 .parallax-text h2 {
@@ -105,6 +110,8 @@ line-height: 96.82px;
   border: none;
   margin-top: -80vh;
   padding-bottom: 100vh;
+  z-index: 100;
+  position: relative;
 }
 
 @media screen and (max-width: 550px) {
